@@ -80,5 +80,29 @@ function removeDuplicate(a) {
   return b;
 }
 
-// const res = findMaxNumber([66,234,243,423,35453,19]);
+//  problem 6
+
+function sumOfAllNumbers(numbers) {
+  
+  let sum = 0;
+
+  if (Array.isArray(numbers) === false) {
+    return "not array";
+  }
+
+  for (let num of numbers) {
+    if (typeof num !== "number") {
+      return "Invalid type of data";
+    }
+  }
+
+  for(let num of numbers){
+    sum = sum + num
+  }
+
+  return sum;
+
+}
+
+// const res = sumOfAllNumbers([1,2,3,4]);
 // console.log(res);
