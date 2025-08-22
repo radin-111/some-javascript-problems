@@ -26,4 +26,20 @@ function countVowels(word) {
   return a;
 }
 
+// problem 3
+
+function checkPalindrome(word) {
+  const a = word.toLowerCase();
+  let b = "";
+  for (let i = 0; i < a.length; i++) {
+    b = a[i] + b;
+  }
+
+  if (a === b) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
 
