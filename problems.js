@@ -1,3 +1,4 @@
+// Problem 1
 function reverseString(a) {
   let b = "";
   for (let i = 0; i < a.length; i++) {
@@ -5,4 +6,24 @@ function reverseString(a) {
   }
   return b;
 }
+
+// Problem 2
+
+function countVowels(word) {
+  let a = 0;
+  let b = word.toLowerCase();
+  for (let i = 0; i < word.length; i++) {
+    if (
+      b[i] === "a" ||
+      b[i] === "e" ||
+      b[i] === "i" ||
+      b[i] === "o" ||
+      b[i] === "u"
+    ) {
+      a = a + 1;
+    }
+  }
+  return a;
+}
+
 
