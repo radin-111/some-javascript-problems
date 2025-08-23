@@ -83,7 +83,6 @@ function removeDuplicate(a) {
 //  problem 6
 
 function sumOfAllNumbers(numbers) {
-  
   let sum = 0;
 
   if (Array.isArray(numbers) === false) {
@@ -96,13 +95,91 @@ function sumOfAllNumbers(numbers) {
     }
   }
 
-  for(let num of numbers){
-    sum = sum + num
+  for (let num of numbers) {
+    sum = sum + num;
   }
 
   return sum;
+}
+// Problem 7
+function findEvenNumber(numbers) {
+  let b = [];
+  if (Array.isArray(numbers) === false) {
+    return "not array";
+  }
 
+  for (let num of numbers) {
+    if (typeof num !== "number") {
+      return "Invalid type of data";
+    }
+  }
+
+  for (let num of numbers) {
+    if (num % 2 === 0 && !b.includes(num)) {
+      b.push(num);
+    }
+  }
+
+  return b;
 }
 
-// const res = sumOfAllNumbers([1,2,3,4]);
-// console.log(res);
+// problem 8
+
+function capitalizeFirstLetter(word) {
+  if (typeof word !== "string") {
+    return "invalid type";
+  }
+
+  let a = word.split(" ");
+  let b = "";
+  for (let i of a) {
+    b = b + " " + i[0].toUpperCase() + i.slice(1);
+  }
+
+  return b;
+}
+
+// problem 9
+
+function factorial(num) {
+  let b = 1;
+  if (typeof num !== "number") {
+    return "Invalid type";
+  }
+
+  if (num === 0) {
+    return 1;
+  }
+
+  if (num < 0) {
+    return "factorial is not defined for negative numbers";
+  }
+
+  for (let i = 1; i <= num; i++) {
+    b = b * i;
+  }
+  return b;
+}
+
+// problem 10
+
+function pingPong() {
+  let output = "";
+  for (let i = 1; i <= 20; i++) {
+    if (i % 3 === 0) {
+      if (i % 5 === 0) {
+        output += "PingPong , ";
+        process;
+      } else {
+        output += "Ping ,";
+      }
+    } else if (i % 5 === 0) {
+      output += "Pong ,";
+    } else {
+      output+=`${i} , `;
+    }
+  }
+
+  console.log(output)
+}
+
